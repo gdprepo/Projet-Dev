@@ -22,8 +22,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="/categories">Categories</a>
-                    <a href="/products">Produits</a>
+                    <a href="{{route('category.list')}}">Categories</a>
+                    <a href="{{route('product.list')}}">Produits</a>
                 </div>
             </div>
         </div>

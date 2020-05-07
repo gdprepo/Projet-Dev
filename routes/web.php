@@ -22,3 +22,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/categories', 'CategoryController@index')->name('category.list');
+
+Route::post('categories/delete/{id}', 'CategoryController@delete')->name('category.delete');
+
+Route::get('/products', 'ProductController@index')->name('product.list');
+Route::get('/products/add', 'ProductController@add')->name('product.add');
+Route::post('products/update', 'ProductController@create')->name('product.create');
+Route::post('products/delete/{id}', 'ProductController@delete')->name('product.delete');

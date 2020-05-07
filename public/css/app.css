@@ -49,3 +49,8 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+
+.imgCategory {
+    height: 90px;
+    width: auto;
+}
