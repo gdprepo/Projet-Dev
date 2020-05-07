@@ -54,3 +54,7 @@ html, body {
     height: 90px;
     width: auto;
 }
+
+.add {
+    width: 50%;
+}

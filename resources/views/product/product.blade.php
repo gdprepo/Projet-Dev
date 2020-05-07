@@ -1,9 +1,15 @@
 @extends('layouts.app')
 
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{{route('home')}}">Retour</a>
+  <div class="top-right links">
+    <a href="{{route('product.add')}}">Ajouter</a>
+  </div>
+</nav>
+
 @section('content')
 
 <div class="container">
-
 
 <table class="table">
   <thead>
@@ -24,7 +30,7 @@
       <td scope="row">
       
       @foreach ($product->categories as $category)
-        {{$category->title}}
+        <p>{{$category->title}}</p>
       @endforeach
       </td>
       <td>

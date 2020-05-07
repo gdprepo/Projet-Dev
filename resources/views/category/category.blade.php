@@ -1,12 +1,16 @@
 @extends('layouts.app')
 
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{{route('home')}}">Retour</a>
+  <div class="top-right links">
+    <a href="{{route('category.add')}}">Ajouter</a>
+  </div>
+</nav>
+
 @section('content')
 
 <div class="container">
 
-<a href="{{route('category.add')}}">
-<button type="button" class="btn btn-primary">Ajouter </button>
-</a>
 <table class="table">
   <thead>
     <tr>

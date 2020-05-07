@@ -1,58 +1,41 @@
 @extends('layouts.app')
 
-@section('content')
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{{route('product.list')}}">Retour</a>
+  <div class="top-right links">
+    <a href="{{ url('/home') }}">Home</a>
   </div>
 </nav>
+
+@section('content')
 
 <div class="container">
 
     <form method="post" action="{{route('product.create')}}">
     @csrf
         <div class="form-group">
-            <label>Titre </label>
-            <input class="form-control" type="text" name="title" id="title" placeholder="Entrer un titre">
-            <label>Description</label>
-            <input class="form-control" type="text" name="description" id="description" placeholder="Entrer une description">
-            <label>image</label>
             <div class="form-group">
-                <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" name="image" class="form-control-file" id="image">
+              <label>Titre </label>
+              <input class="form-control" type="text" name="title" id="title" placeholder="Entrer un titre">
             </div>
-        </div>
+            <div class="form-group">
+              <label>Description</label>
+              <input class="form-control" type="text" name="description" id="description" placeholder="Entrer une description">
+            </div>
+            <div class="form-group">
+                <label>Image</label>
+                <input class="form-control" type="text" name="image" id="image" placeholder="Entrer un titre">
+            </div>
+
+            <div class="form-group">
+              <label>Categories</label>
+              <select name="categories[]" multiple="multiple" class="form-control" name="categories" id="categories">
+                @foreach($categories as $category)
+                    <option value="{{$category->id}}">{{$category->title}}</option>
+                @endforeach
+              </select>
+            </div>
+
         <button class="form-control" type="submit" class="btn btn-primary">Enregistrer</button>
 
     </form>
