@@ -20,6 +20,23 @@ class CategoryController extends Controller
         return view('category/category', ['categories' => $categories]);
     }
 
+    public function add()
+    {
+        return view("category/add");
+    }
+
+    public function store(Request $request)
+    {
+        $categorie = new Category;
+
+        $categorie->title = $request->input('title');
+        $categorie->image  =  $request->input('image');        
+
+        $categorie->save();
+        
+        return back()->withInfo("Category add");
+    }
+
     public function delete($id)
     {
         $categorie = Category::find($id);

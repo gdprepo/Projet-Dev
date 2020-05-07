@@ -22,7 +22,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/categories', 'CategoryController@index')->name('category.list');
-
+Route::get('/categories/add', 'CategoryController@add')->name('category.add');
+Route::post('categories/create', 'CategoryController@store')->name('category.create');
 Route::post('categories/delete/{id}', 'CategoryController@delete')->name('category.delete');
 
 Route::get('/products', 'ProductController@index')->name('product.list');

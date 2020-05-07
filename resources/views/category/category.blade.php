@@ -4,7 +4,9 @@
 
 <div class="container">
 
-
+<a href="{{route('category.add')}}">
+<button type="button" class="btn btn-primary">Ajouter </button>
+</a>
 <table class="table">
   <thead>
     <tr>
