@@ -10,4 +10,9 @@ class Product extends Model
     {
         return $this->belongsToMany('App\Category');
     }
+
+    public function commands()
+    {
+        return $this->belongsToMany('App\Command');
+    }
 }

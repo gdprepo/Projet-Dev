@@ -6,7 +6,7 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ url('/home') }}">Disconnect</a>
+                        <a href="{{ route('logout') }}">Disconnect</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

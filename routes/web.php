@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Resources\Product as ProductResource;
+use App\Product;
+use App\Http\Resources\Command as CommandResource;
+use App\Command;
+
+Route::get('/api/product', function () {
+    return ProductResource::collection(Product::all());
+});
+
+Route::get('/api/command', function () {
+    return CommandResource::collection(Command::all());
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,6 +33,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'HomeController@logout')->name('disconnect');
 
 Route::get('/categories', 'CategoryController@index')->name('category.list');
 Route::get('/categories/add', 'CategoryController@add')->name('category.add');
