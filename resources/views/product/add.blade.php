@@ -28,8 +28,8 @@
             </div>
 
             <div class="form-group">
-              <label>Categories</label>
-              <select name="categories[]" multiple="multiple" class="form-control" name="categories" id="categories">
+              <!-- <label>Categories</label> -->
+              <select name="categories[]" multiple="true" class="select-multiple" name="categories" id="categories">
                 @foreach($categories as $category)
                     <option value="{{$category->id}}">{{$category->title}}</option>
                 @endforeach
@@ -39,6 +39,10 @@
         <button class="form-control" type="submit" class="btn btn-primary">Enregistrer</button>
 
     </form>
+
+
+
 </div>
+
 
 @endsection

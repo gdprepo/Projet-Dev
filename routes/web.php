@@ -17,6 +17,8 @@ use App\Http\Resources\Product as ProductResource;
 use App\Product;
 use App\Http\Resources\Command as CommandResource;
 use App\Command;
+use App\Http\Resources\Category as CategoryResource;
+use App\Category;
 
 Route::get('/api/product', function () {
     return ProductResource::collection(Product::all());
@@ -24,6 +26,10 @@ Route::get('/api/product', function () {
 
 Route::get('/api/command', function () {
     return CommandResource::collection(Command::all());
+});
+
+Route::get('/api/category', function () {
+    return CategoryResource::collection(Category::all());
 });
 
 Route::get('/', function () {

@@ -10,4 +10,9 @@ class Command extends Model
     {
         return $this->belongsToMany('App\Product');
     }
+
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+    }
 }

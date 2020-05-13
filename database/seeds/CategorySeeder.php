@@ -13,12 +13,12 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             'title' => "Sous Vetement",
-            'image' => Str::random(10),
+            'image' => "/images/calecon.jpg",
         ]);
 
         DB::table('categories')->insert([
             'title' => "Pantalon",
-            'image' => "/images/calecon.jpg",
+            'image' => "/images/pantalon.jpg",
         ]);
     }
 }

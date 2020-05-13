@@ -18,6 +18,7 @@ class CreateCommandsTable extends Migration
             $table->string('status');
             $table->string('date');
             $table->string('prix');
+            $table->string('user_id');
             $table->timestamps();
         });
 
