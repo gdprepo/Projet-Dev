@@ -37,7 +37,11 @@
 
           <form action="{{route('product.delete', $product->id)}}" method="POST">
             @csrf
-            <button type="submit" class="btn btn-primary">Supprimer </button>
+            <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+          </form>
+          <form action="{{route('product.update', $product->id)}}" method="POST">
+            @csrf
+            <button style="width:100%" type="submit" class="btn btn-primary">Modifier </button>
           </form>
         </td>
       </tr>

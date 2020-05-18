@@ -57,6 +57,30 @@ class ProductController extends Controller
         return back()->withInfo('Product create');
     }
 
+    public function update($id)
+    {
+        $product = Product::find($id);
+        $categories = Category::All();
+
+
+        return view('product/edit', ["product" => $product, "categories" => $categories]);
+    }
+
+    public function check(Request $request, $id)
+    {
+        $product = Product::find($id);
+
+        $product->title = $request->input('title');
+        $product->description = $request->input('description');
+        $product->image = $request->input('image');
+        $product->save();
+        $product->categories()->attach($request->input('categories'));
+        $product->save();
+
+        return view('product/product')->withInfo('Product create');
+
+    }
+
     public function delete($id)
     {
         if (!$this->isAdmin()) {

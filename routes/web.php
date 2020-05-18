@@ -32,6 +32,8 @@ Route::get('/api/category', function () {
     return CategoryResource::collection(Category::all());
 });
 
+Route::post('/api/login', 'ApiAuthenticationController@login')->name('api.login');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -48,5 +50,9 @@ Route::post('categories/delete/{id}', 'CategoryController@delete')->name('catego
 
 Route::get('/products', 'ProductController@index')->name('product.list');
 Route::get('/products/add', 'ProductController@add')->name('product.add');
+Route::post('products/update/{id}', 'ProductController@update')->name('product.update');
 Route::post('products/create', 'ProductController@store')->name('product.create');
 Route::post('products/delete/{id}', 'ProductController@delete')->name('product.delete');
+Route::post('products/check/{id}', 'ProductController@check')->name('product.check');
+
+
