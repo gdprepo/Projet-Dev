@@ -42,6 +42,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'HomeController@logout')->name('disconnect');
+Route::get('/compte/{id}', 'HomeController@compte')->name('compte');
+Route::post('/compte/check/{id}', 'HomeController@check')->name('compte.check');
+
 
 Route::get('/categories', 'CategoryController@index')->name('category.list');
 Route::get('/categories/add', 'CategoryController@add')->name('category.add');

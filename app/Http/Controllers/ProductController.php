@@ -77,7 +77,7 @@ class ProductController extends Controller
         $product->categories()->attach($request->input('categories'));
         $product->save();
 
-        return view('product/product')->withInfo('Product create');
+        return redirect('products')->withInfo('Product create');
 
     }
 

@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('image');
+            $table->string('prix');
             $table->timestamps();
         });
 
@@ -35,6 +36,7 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('category_product');
         Schema::dropIfExists('products');
     }
 }

@@ -39,6 +39,7 @@ class CreateCommandsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('command_product');
         Schema::dropIfExists('commands');
     }
 }
