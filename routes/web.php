@@ -24,15 +24,13 @@ Route::get('/api/product', function () {
     return ProductResource::collection(Product::all());
 });
 
-Route::get('/api/command', function () {
-    return CommandResource::collection(Command::all());
-});
-
 Route::get('/api/category', function () {
     return CategoryResource::collection(Category::all());
 });
 
 Route::post('/api/login', 'ApiAuthenticationController@login')->name('api.login');
+Route::get('/api/command', 'ApiCommandController@index')->name('api.command');
+
 
 Route::get('/', function () {
     return view('welcome');

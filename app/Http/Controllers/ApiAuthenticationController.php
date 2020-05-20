@@ -17,6 +17,11 @@ class ApiAuthenticationController extends Controller
             $user->save();
 
             return response()->json([
+                'user' => [
+                    'name' => $user->name,
+                    'mail' => $user->email,
+                    'image' => $user->image,
+                ],
                 'success' => true,
                 'token' => $user->token,
             ]);
