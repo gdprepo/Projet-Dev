@@ -32,6 +32,7 @@ Route::post('/api/login', 'ApiAuthenticationController@login')->name('api.login'
 Route::get('/api/command', 'ApiCommandController@index')->name('api.command');
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
