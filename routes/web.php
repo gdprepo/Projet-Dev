@@ -30,8 +30,7 @@ Route::get('/api/category', function () {
 
 Route::post('/api/login', 'ApiAuthenticationController@login')->name('api.login');
 Route::get('/api/command', 'ApiCommandController@index')->name('api.command');
-
-
+Route::post('/api/validate-command', 'ValidateCommandController@validatecommand')->name('api.validatecommand');
 
 Route::get('/', function () {
     return view('welcome');

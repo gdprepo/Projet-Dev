@@ -15,4 +15,18 @@ class Command extends Model
     {
         return $this->belongsToMany('App\User');
     }
+
+    public function getProducts(): Collection
+    {
+        return $this->products;
+    }
+
+    public function addProduct(Product $product): self
+    {
+        if (!$this->products->contains($product)) {
+            $this->products[] = $product;
+        }
+
+        return $this;
+    }
 }
