@@ -31,9 +31,9 @@ Importer la base de donée
 
 * Voici les différentes parties du site
 
-![alt text](https://github.com/ "Logo Title Text 1")
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/accueil.png "Image accueil")
 
-![alt text](https://github.com/ "Logo Title Text 1")
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/addcategory.png "Image create category")
 
 ![alt text](https://github.com/ "Logo Title Text 1")
 
