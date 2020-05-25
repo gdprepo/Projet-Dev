@@ -46,6 +46,6 @@ Importer la base de donée
 
 ### Logiciel
 
-Lien vers le projet application electron
+Lien vers le projet `application electron`
 
 * https://github.com/wewlr17/Dev-App
