@@ -31,14 +31,21 @@ Importer la base de donée
 
 * Voici les différentes parties du site
 
-![alt text](https://github.com/ "Logo Title Text 1")
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/accueil.png "Image accueil")
 
-![alt text](https://github.com/ "Logo Title Text 1")
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/listcategories.png "Image list cateogories")
 
-![alt text](https://github.com/ "Logo Title Text 1")
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/addcategory.png "Image create category")
 
-![alt text](https://github.com/ "Logo Title Text 1")
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/listproducts.png "Image list products")
 
-![alt text](https://github.com/ "Logo Title Text 1")
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/addproduct.png "Image create product")
+
+![alt text](https://github.com/wewlr17/Projet-Dev/blob/master/screen/modifierproduct.png "Image modifier product")
 
 
+### Logiciel
+
+Lien vers le projet `application electron`
+
+* https://github.com/wewlr17/Dev-App
