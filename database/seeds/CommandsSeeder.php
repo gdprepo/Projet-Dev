@@ -25,6 +25,11 @@ class CommandsSeeder extends Seeder
 
         DB::table('command_product')->insert([
             'command_id' => '1',
+            'product_id' => '1'
+        ]);
+
+        DB::table('command_product')->insert([
+            'command_id' => '1',
             'product_id' => '2'
         ]);
 

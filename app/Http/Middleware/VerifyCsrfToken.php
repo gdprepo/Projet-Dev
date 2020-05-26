@@ -13,7 +13,9 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'http://localhost:8000/api/login',
+        'http://localhost:8000/api/contact',
         'http://localhost:8000/api/validate-command',
+        'http://localhost:8000/api/confirmer-command',
 
     ];
 }

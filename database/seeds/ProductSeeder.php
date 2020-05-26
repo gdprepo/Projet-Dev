@@ -25,9 +25,33 @@ class ProductSeeder extends Seeder
             'prix' => '20'
         ]);
 
+        DB::table('products')->insert([
+            'title' => "Tee shirt coeur",
+            'description' => "description du tee shirt",
+            'image' => "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_pHCX3auvqvMllEhcwIB5zvO21GGsg4_w1DzsGA-H-uwq_mIgE4lv0r3iaO2AkQbGV26y3EE&usqp=CAc",
+            'prix' => '30'
+        ]);
+
+        DB::table('products')->insert([
+            'title' => "Tee shirt blanc",
+            'description' => "description du tee shirt",
+            'image' => "https://www.destockjeans.fr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/4/141_2.jpg",
+            'prix' => '30'
+        ]);
+
         DB::table('category_product')->insert([
             'product_id' => '1',
             'category_id' => '1',
+        ]);
+
+        DB::table('category_product')->insert([
+            'product_id' => '1',
+            'category_id' => '2',
+        ]);
+
+        DB::table('category_product')->insert([
+            'product_id' => '1',
+            'category_id' => '4',
         ]);
 
         DB::table('category_product')->insert([
@@ -36,8 +60,29 @@ class ProductSeeder extends Seeder
         ]);
 
         DB::table('category_product')->insert([
-            'product_id' => '1',
-            'category_id' => '2',
+            'product_id' => '2',
+            'category_id' => '4',
         ]);
+
+        DB::table('category_product')->insert([
+            'product_id' => '3',
+            'category_id' => '4',
+        ]);
+
+        DB::table('category_product')->insert([
+            'product_id' => '3',
+            'category_id' => '5',
+        ]);
+
+        DB::table('category_product')->insert([
+            'product_id' => '4',
+            'category_id' => '3',
+        ]);
+
+        DB::table('category_product')->insert([
+            'product_id' => '4',
+            'category_id' => '5',
+        ]);
+
     }
 }

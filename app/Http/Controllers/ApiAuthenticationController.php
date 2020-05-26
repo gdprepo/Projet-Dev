@@ -12,23 +12,27 @@ class ApiAuthenticationController extends Controller
     {
         $user = User::where('email', '=', $request->input('mail'))->first();
   
-        if (Hash::check($request->input('password'), $user->password)) {
-            $user->token = md5(uniqid(mt_rand(), true));
-            $user->save();
+        if ($user) {
+            if (Hash::check($request->input('password'), $user->password)) {
+                $user->token = md5(uniqid(mt_rand(), true));
+                $user->save();
 
-            return response()->json([
-                'user' => [
-                    'name' => $user->name,
-                    'mail' => $user->email,
-                    'image' => $user->image,
-                ],
-                'success' => true,
-                'token' => $user->token,
-            ]);
+                return response()->json([
+                    'user' => [
+                        'name' => $user->name,
+                        'mail' => $user->email,
+                        'image' => $user->image,
+                    ],
+                    'success' => true,
+                    'token' => $user->token,
+                ]);
+            } 
         }
 
         return response()->json([
             'success' => false,
         ]);
+
+
     }
 }
