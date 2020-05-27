@@ -30,6 +30,7 @@ Route::get('/api/category', function () {
 
 Route::post('/api/login', 'ApiAuthenticationController@login')->name('api.login');
 Route::post('/api/contact', 'ApiContactController@contact')->name('api.contact');
+//Route::get('/api/mail', 'ApiContactController@mail')->name('api.mail');
 Route::get('/api/command', 'ApiCommandController@index')->name('api.command');
 Route::post('/api/validate-command', 'ValidateCommandController@validatecommand')->name('api.validatecommand');
 Route::post('/api/confirmer-command', 'ConfirmerCommandController@confirmer')->name('api.confirmer');
