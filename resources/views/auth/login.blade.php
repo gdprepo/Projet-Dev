@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{{url('/')}}">Retour</a>
+</nav>
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

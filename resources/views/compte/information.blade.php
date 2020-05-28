@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="{{route('product.list')}}">Retour</a>
-  <div class="top-right links">
-    <a href="{{ url('/home') }}">Home</a>
-  </div>
+  <a class="navbar-brand" href="{{url('/')}}">Retour</a>
+
 </nav>
 
 @section('content')

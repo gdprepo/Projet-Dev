@@ -29,6 +29,8 @@ Route::get('/api/category', function () {
 });
 
 Route::post('/api/login', 'ApiAuthenticationController@login')->name('api.login');
+Route::get('/api/register', 'RegisterUserController@register')->name('api.register');
+
 Route::post('/api/contact', 'ApiContactController@contact')->name('api.contact');
 //Route::get('/api/mail', 'ApiContactController@mail')->name('api.mail');
 Route::get('/api/command', 'ApiCommandController@index')->name('api.command');
